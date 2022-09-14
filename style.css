@@ -3,8 +3,8 @@ body {
     background-image:url(./images/pokeball.jpg);
     background-repeat:no-repeat;
     background-position:top left;
-    background-attachment:fixed;   
-    background-size: cover; 
+    background-attachment:fixed;
+    background-size: cover;
     min-height: 400px;
     margin-bottom: 100px;
     font-family: Verdana, Sans-serif;
@@ -61,7 +61,7 @@ img{
 }
 
 footer {
-    position: fixed; 
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;

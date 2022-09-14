@@ -1,17 +1,17 @@
 class pokeInfoGen{
     constructor(name="", num="", gen=0, parent="", descendant="", candy=0, evolveLvl=0, type="", weather="", atk=0, def=0, sta=0, fastMoves="",chargeMoves="") {
-        this.name = name;    
-        this.num = num;      
+        this.name = name;
+        this.num = num;
         this.gen = gen;
-        this.parent = parent; 
-        this.descendant = descendant; 
-        this.candy = candy; 
-        this.evolveLvl = evolveLvl; 
-        this.type = type; 
-        this.weather = weather; 
-        this.atk = atk; 
-        this.def = def; 
-        this.sta = sta; 
+        this.parent = parent;
+        this.descendant = descendant;
+        this.candy = candy;
+        this.evolveLvl = evolveLvl;
+        this.type = type;
+        this.weather = weather;
+        this.atk = atk;
+        this.def = def;
+        this.sta = sta;
         this.fastMoves = fastMoves;
         this.chargeMoves = chargeMoves;
     }
@@ -27,18 +27,18 @@ class pokeInfoGen{
 	get print(){
         return "" + this.name + ":\nThis Pokemon is Num #" + this.num + " From Gen #" + this.gen + " And Has The Type: " + this.type
         + "\nIts Evovlution Stage Is At #" + this.evolveLvl + " And Needs " + this.candy + " Candies To Evolve"
-        + "\nWith " + (this.parent=="None" ? "No " : this.parent + " As The ") + "Previous Evolution, And " + (this.descendant=="None" ? "No " : this.descendant + " As The ") 
+        + "\nWith " + (this.parent=="None" ? "No " : this.parent + " As The ") + "Previous Evolution, And " + (this.descendant=="None" ? "No " : this.descendant + " As The ")
         + "Next Evolution\nIt Is Found Easiest In " + this.weather + " Weather"
-        + "\n\nATK: " + this.atk + " DEF: " + this.def + " STA: " + this.sta 
-        + "\nFast Moves: " + this.fastMoves 
+        + "\n\nATK: " + this.atk + " DEF: " + this.def + " STA: " + this.sta
+        + "\nFast Moves: " + this.fastMoves
         + "\nCharge Moves: " + this.chargeMoves + "\n\n";
-    }   
+    }
 }
 
 function pokeArray(){
 
     var genNum = 1;
-    
+
     const bulbasaur = new pokeInfoGen("Bulbasaur", ("00"+genNum++), 1, "None", "Ivysaur", 25, 1, "Grass / Poison", "Clear / Cloudy", 118, 118, 90, "Tackle / Vine Whip", "Sludge Bomb / Seed Bomb / Power Whip");
     const ivysaur = new pokeInfoGen("Ivysaur", ("00"+genNum++), 1, "Bulbasaur", "Venusaur", 100, 2, "Grass / Poison", "Clear / Cloudy", 151, 151, 120, "Razor Leaf / Vine Whip", "Sludge Bomb / Solar Beam / Power Whip");
     const venusaur = new pokeInfoGen("Venusaur", ("00"+genNum++), 1, "Ivysaur", "None", 0, 3, "Grass / Poison", "Clear / Cloudy", 198, 198, 160, "Razor Leaf / Vine Whip", "Sludge Bomb / Solar Beam / Petal Blizzard");
