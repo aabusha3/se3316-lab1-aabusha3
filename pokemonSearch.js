@@ -91,3 +91,28 @@ function nameSearch(){
     resultArray = [];
     resultArrayIndex = 0;
 }
+
+function nameSearchCheck(e){
+    if(window.event) if(e.keyCode == 13) nameSearch();
+}
+
+
+function numSearch(){
+    var searchNum = document.getElementById("numSearch").value;
+
+    for(const pokemon of pokemonArray)
+        if(pokemon.pNum.includes(searchNum.toString())){
+            resultArray[resultArrayIndex++] = pokemon;
+            if(resultArrayIndex == 5) break;
+        };
+    
+    if(resultArray.length == 0) window.alert("Search Turned Empty :(");
+    else for(const pokemonResult of resultArray) window.alert(pokemonResult.print);
+
+    resultArray = [];
+    resultArrayIndex = 0;
+}
+
+function numSearchCheck(e){
+    if(window.event) if(e.keyCode == 13) numSearch();
+}
