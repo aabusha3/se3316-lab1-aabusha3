@@ -15,7 +15,7 @@
 <table>
     <tr>
         <div>
-            <input id="numSearch" type="number" onkeypress="numSearchCheck(event)" placeholder="Search By Number"/>
+            <input id="numSearch" type="text" onkeypress="numSearchCheck(event)" maxlength="2" placeholder="Search By Number (1-20)"/>
             <button onclick="numSearch()" type="submit">
                 <i><p>&#128269</p></i>
             </button>
@@ -24,7 +24,7 @@
     <tr><br></tr>
     <tr>
         <div>
-            <input id="nameSearch" type="text" onkeypress="nameSearchCheck(event)" placeholder="Search By Name"/>
+            <input id="nameSearch" type="text" onkeypress="nameSearchCheck(event)" maxlength="20" placeholder="Search By Name ('A-Z' & 'a-z')"/>
             <button onclick="nameSearch()" type="submit">
                 <i><p>&#128269</p></i>
             </button>

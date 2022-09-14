@@ -66,10 +66,8 @@ function pokeArray(){
     const rattata = new pokeInfoGen("Rattata", ("0"+genNum++), 1, "None", "Raticate", 25, 1, "Normal", "Partly Cloudy", 103, 70, 60, "Tackle / Quick Attack", "Dig / Hyper Fang / Body Slam");
     const raticate = new pokeInfoGen("Raticate", ("0"+genNum), 1, "Rattata", "None", 0, 2, "Normal", "Partly Cloudy", 161, 144, 110, "Bite / Quick Attack", "Dig / Hyper Fang / Hyper Beam");
     
-    var pokemonArray = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, metapod, butterfree, 
+    return [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, metapod, butterfree, 
         weedle, kakuna, beedrill, pidgey, pidgeotto, pidgeot, rattata, raticate];
-    
-    return pokemonArray;
     }
 
 var resultArray = [];
@@ -78,6 +76,13 @@ var pokemonArray = new pokeArray();
 
 function nameSearch(){
     var searchName = document.getElementById("nameSearch").value;
+
+    const regex = new RegExp('([a-zA-Z\n\r])');
+
+    if(!regex.test(searchName)) {
+        window.alert("Please Search Only Letters 'A-Z And 'a-z'");
+        return;
+    }
 
     for(const pokemon of pokemonArray)
         if(pokemon.pName.toLowerCase().includes(searchName.toLowerCase())){
@@ -100,8 +105,13 @@ function nameSearchCheck(e){
 function numSearch(){
     var searchNum = document.getElementById("numSearch").value;
 
+    if(parseInt(searchNum)  > 20 || parseInt(searchNum) < 1){
+        window.alert("Please Search Only Numbers between 1 And 20");
+        return;
+    }
+
     for(const pokemon of pokemonArray)
-        if(pokemon.pNum.includes(searchNum.toString())){
+        if(pokemon.pNum.includes(searchNum)){
             resultArray[resultArrayIndex++] = pokemon;
             if(resultArrayIndex == 5) break;
         };
