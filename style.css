@@ -1,6 +1,6 @@
 body {
     background-color:#fff;
-    background-image:url(images\pokeball.jpg);
+    background-image:url(./images/pokeball.jpg);
     background-repeat:no-repeat;
     background-position:top left;
     background-attachment:fixed;   
