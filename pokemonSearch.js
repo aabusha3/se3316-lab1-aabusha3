@@ -71,3 +71,23 @@ function pokeArray(){
     
     return pokemonArray;
     }
+
+var resultArray = [];
+var resultArrayIndex = 0;
+var pokemonArray = new pokeArray();
+
+function nameSearch(){
+    var searchName = document.getElementById("nameSearch").value;
+
+    for(const pokemon of pokemonArray)
+        if(pokemon.pName.toLowerCase().includes(searchName.toLowerCase())){
+            resultArray[resultArrayIndex++] = pokemon;
+            if(resultArrayIndex == 5) break;
+        };
+    
+    if(resultArray.length == 0) window.alert("Search Turned Empty :(");
+    else for(const pokemonResult of resultArray) window.alert(pokemonResult.print);
+
+    resultArray = [];
+    resultArrayIndex = 0;
+}
