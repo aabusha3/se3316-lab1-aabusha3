@@ -13,6 +13,25 @@
 <p>Hello World!</p>
 
 <table>
+    <tr>
+        <div>
+            <input id="numSearch" type="number" onkeypress="numSearchCheck(event)" placeholder="Search By Number" />
+            <button onclick="numSearch()" type="submit">
+                <i><p>&#128269</p></i>
+            </button>
+        </div>
+    </tr>
+    <tr><br></tr>
+    <tr>
+        <div>
+            <input id="nameSearch" type="text" onkeypress="nameSearchCheck(event)" placeholder="Search By Name" />
+            <button onclick="nameSearch()" type="submit">
+                <i><p>&#128269</p></i>
+            </button>
+        </div>
+     
+    </tr>
+
     <tr id="contentRow">
         <td id="firstCell"></td>
         <td id="secondCell"></td>
