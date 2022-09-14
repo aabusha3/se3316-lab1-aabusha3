@@ -10,6 +10,26 @@ body {
     font-family: Verdana, Sans-serif;
 }
 
+table{
+    width: 100%;
+}
+
+#contentRow{
+    vertical-align: middle;
+}
+
+#secondCell{
+    width: 6.5%;
+}
+
+#thirdCell{
+    width: 90%;
+}
+
+#fourthCell{
+    width: 5%;
+}
+
 ul{
     list-style-type: none;
     margin: 0;
