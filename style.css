@@ -39,3 +39,20 @@ img{
     width: 500;
     height: 500;
 }
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #f2cbcb;
+    border-radius: 20px 100px 0px 0px;
+    font-family: Verdana, Sans-serif;
+    font-style: italic;
+    font-size: medium;
+}
+
+a {
+    color: #000;
+}
