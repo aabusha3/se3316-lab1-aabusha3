@@ -77,7 +77,7 @@ var pokemonArray = new pokeArray();
 function nameSearch(){
     var searchName = document.getElementById("nameSearch").value;
 
-    const regex = new RegExp('([a-zA-Z\n\r])');
+    const regex = new RegExp('([a-zA-Z])');
 
     if(!regex.test(searchName)) {
         window.alert("Please Search Only Letters 'A-Z And 'a-z'");
