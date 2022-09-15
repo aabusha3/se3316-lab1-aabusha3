@@ -12,56 +12,45 @@
 <h1>Aabusha3's SE 3316 Lab 1: Pok&#233dex</h1>
 <p>Hello World!</p>
 
-<table>
-    <tr>
-        <div>
-            <input id="numSearch" type="text" onkeypress="numSearchCheck(event)" maxlength="2" placeholder="Search By Number (1-20)"/>
-            <button onclick="numSearch()" type="submit">
-                <i><p>&#128269</p></i>
-            </button>
-        </div>
-    </tr>
-    <tr><br></tr>
-    <tr>
-        <div>
-            <input id="nameSearch" type="text" onkeypress="nameSearchCheck(event)" maxlength="20" placeholder="Search By Name ('A-Z' & 'a-z')"/>
-            <button onclick="nameSearch()" type="submit">
-                <i><p>&#128269</p></i>
-            </button>
-        </div>
-     
-    </tr>
+<div id="search">
+    <input id="numSearch" type="text" onkeypress="numSearchCheck(event)" maxlength="2" placeholder="Search By Number (1-20)"/>
+    <button onclick="numSearch()" type="submit">
+        <i><p>&#128269</p></i>
+    </button>
+</div>
+<br>
+<div id="search">
+    <input id="nameSearch" type="text" onkeypress="nameSearchCheck(event)" maxlength="20" placeholder="Search By Name ('A-Z' & 'a-z')"/>
+    <button onclick="nameSearch()" type="submit">
+        <i><p>&#128269</p></i>
+    </button>
+</div>
 
-    <tr id="contentRow">
-        <td id="firstCell"></td>
-        <td id="secondCell"></td>
-        <td id="thirdCell">
-            <ul>
-                <li><img src="images\1.png" alt="Bulbasaur"><br><br>#001<br>Bulbasaur</li>
-                <li><img src="images\2.png" alt="Ivysaur"><br><br>#002<br>Ivysaur</li>
-                <li><img src="images\3.png" alt="Venusaur"><br><br>#003<br>Venusaur</li>
-                <li><img src="images\4.png" alt="Charmander"><br><br>#004<br>Charmander</li>
-                <li><img src="images\5.png" alt="Charmeleon"><br><br>#005<br>Charmeleon</li>
-                <li><img src="images\6.png" alt="Charizard"><br><br>#006<br>Charizard</li>
-                <li><img src="images\7.png" alt="Squirtle"><br><br>#007<br>Squirtle</li>
-                <li><img src="images\8.png" alt="Wartortle"><br><br>#008<br>Wartortle</li>
-                <li><img src="images\9.png" alt="Blastoise"><br><br>#009<br>Blastoise</li>
-                <li><img src="images\10.png" alt="Caterpie"><br><br>#010<br>Caterpie</li>
-                <li><img src="images\11.png" alt="Metapod"><br><br>#011<br>Metapod</li>
-                <li><img src="images\12.png" alt="Butterfree"><br><br>#012<br>Butterfree</li>
-                <li><img src="images\13.png" alt="Weedle"><br><br>#013<br>Weedle</li>
-                <li><img src="images\14.png" alt="Kakuna"><br><br>#014<br>Kakuna</li>
-                <li><img src="images\15.png" alt="Beedrill"><br><br>#015<br>Beedrill</li>
-                <li><img src="images\16.png" alt="Pidgey"><br><br>#016<br>Pidgey</li>
-                <li><img src="images\17.png" alt="Pidgeotto"><br><br>#017<br>Pidgeotto</li>
-                <li><img src="images\18.png" alt="Pidgeot"><br><br>#018<br>Pidgeot</li>
-                <li><img src="images\19.png" alt="Rattata"><br><br>#019<br>Rattata</li>
-                <li><img src="images\20.png" alt="Raticate"><br><br>#020<br>Raticate</li>
-            </ul>
-        </td>
-        <td id="fourthCell"></td>
-    </tr>
-</table>
+<br>
+<div id="content">
+    <ul>
+        <li><img src="images\1.png" alt="Bulbasaur"><br><br>#001<br>Bulbasaur</li>
+        <li><img src="images\2.png" alt="Ivysaur"><br><br>#002<br>Ivysaur</li>
+        <li><img src="images\3.png" alt="Venusaur"><br><br>#003<br>Venusaur</li>
+        <li><img src="images\4.png" alt="Charmander"><br><br>#004<br>Charmander</li>
+        <li><img src="images\5.png" alt="Charmeleon"><br><br>#005<br>Charmeleon</li>
+        <li><img src="images\6.png" alt="Charizard"><br><br>#006<br>Charizard</li>
+        <li><img src="images\7.png" alt="Squirtle"><br><br>#007<br>Squirtle</li>
+        <li><img src="images\8.png" alt="Wartortle"><br><br>#008<br>Wartortle</li>
+        <li><img src="images\9.png" alt="Blastoise"><br><br>#009<br>Blastoise</li>
+        <li><img src="images\10.png" alt="Caterpie"><br><br>#010<br>Caterpie</li>
+        <li><img src="images\11.png" alt="Metapod"><br><br>#011<br>Metapod</li>
+        <li><img src="images\12.png" alt="Butterfree"><br><br>#012<br>Butterfree</li>
+        <li><img src="images\13.png" alt="Weedle"><br><br>#013<br>Weedle</li>
+        <li><img src="images\14.png" alt="Kakuna"><br><br>#014<br>Kakuna</li>
+        <li><img src="images\15.png" alt="Beedrill"><br><br>#015<br>Beedrill</li>
+        <li><img src="images\16.png" alt="Pidgey"><br><br>#016<br>Pidgey</li>
+        <li><img src="images\17.png" alt="Pidgeotto"><br><br>#017<br>Pidgeotto</li>
+        <li><img src="images\18.png" alt="Pidgeot"><br><br>#018<br>Pidgeot</li>
+        <li><img src="images\19.png" alt="Rattata"><br><br>#019<br>Rattata</li>
+        <li><img src="images\20.png" alt="Raticate"><br><br>#020<br>Raticate</li>
+    </ul>
+</div>
 
 <footer>
     <p>&emsp;&emsp;Pok&#233mon data set from <a href="https://www.kaggle.com/kvpratama/pokemon-images-dataset">https://www.kaggle.com/kvpratama/pok&#233mon-images-dataset</a>

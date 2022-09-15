@@ -5,35 +5,17 @@ body {
     background-position:top left;
     background-attachment:fixed;
     background-size: cover;
-    min-height: 400px;
-    margin-bottom: 100px;
     font-family: Verdana, Sans-serif;
-}
-
-table{
-    width: 100%;
-}
-
-#contentRow{
-    vertical-align: middle;
-}
-
-#secondCell{
-    width: 6.5%;
-}
-
-#thirdCell{
-    width: 90%;
-}
-
-#fourthCell{
-    width: 5%;
+    height: 100%;
 }
 
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 100%;
+    position: relative;
+    left: 6.5%;
 }
 
 li {
@@ -77,11 +59,16 @@ a {
     color: #000;
 }
 
-div {
+#search {
     width: 20%;
     position: relative;
     display: flex;
     left: 78%;
+}
+
+#content {
+    display: flex;
+    padding-bottom: 70px;
 }
 
 input {
