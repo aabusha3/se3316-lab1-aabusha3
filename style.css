@@ -67,7 +67,7 @@ a {
 #content {
     padding-bottom: 70px;
     position: absolute;
-    width: 100%;
+    width: auto;
     left: 7.5%;
 }
 
