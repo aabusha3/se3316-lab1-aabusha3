@@ -14,8 +14,6 @@ ul{
     margin: 0;
     padding: 0;
     width: 100%;
-    position: relative;
-    left: 6.5%;
 }
 
 li {
@@ -67,8 +65,10 @@ a {
 }
 
 #content {
-    display: flex;
     padding-bottom: 70px;
+    position: absolute;
+    width: 100%;
+    left: 7.5%;
 }
 
 input {
