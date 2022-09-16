@@ -98,8 +98,8 @@ function nameSearchCheck(e){
 function numSearch(){
     var searchNum = document.getElementById("numSearch").value;
 
-    if(parseInt(searchNum)  > 20 || parseInt(searchNum) < 1){
-        window.alert("Please Search Only Numbers between 1 And 20");
+    if(!Number.isInteger(parseFloat(searchNum)) || isNaN(parseInt(searchNum)) || (parseInt(searchNum)  > 20 || parseInt(searchNum) < 1)){
+        window.alert("Please Search Only Integers Between 1 And 20");
         return;
     }
 
