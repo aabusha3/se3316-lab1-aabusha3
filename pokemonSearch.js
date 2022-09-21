@@ -1,8 +1,10 @@
 class pokeInfoGen{
-    constructor(name="", num="", type="") {
+    constructor(name="", num="", type="", gen=1, evoStage=0) {
         this.name = name;
         this.num = num;
         this.type = type;
+        this.gen = gen;
+        this.evoStage = evoStage;
     }
 
     get pName(){
@@ -14,38 +16,38 @@ class pokeInfoGen{
     }
 
 	get print(){
-        return "" + this.name + ":   #" + this.num + "   Type: " + this.type;
+        return "" + this.name + ":   #" + this.num + "   Type: " + this.type + "   Gen: " + this.gen + "   Evolution Stage: " + this.evoStage;
     }
 }
 
 function pokeArray(){
    
-    const bulbasaur = new pokeInfoGen("Bulbasaur", "001", "Grass / Poison");
-    const ivysaur = new pokeInfoGen("Ivysaur", "002", "Grass / Poison");
-    const venusaur = new pokeInfoGen("Venusaur", "003", "Grass / Poison");
+    const bulbasaur = new pokeInfoGen("Bulbasaur", "001", "Grass / Poison",1,1);
+    const ivysaur = new pokeInfoGen("Ivysaur", "002", "Grass / Poison",1,2);
+    const venusaur = new pokeInfoGen("Venusaur", "003", "Grass / Poison",1,3);
     
-    const charmander = new pokeInfoGen("Charmander", "004", "Fire");
-    const charmeleon = new pokeInfoGen("Charmeleon", "005", "Fire");
-    const charizard = new pokeInfoGen("Charizard", "006", "Fire / Flying");
+    const charmander = new pokeInfoGen("Charmander", "004", "Fire",1,1);
+    const charmeleon = new pokeInfoGen("Charmeleon", "005", "Fire",1,2);
+    const charizard = new pokeInfoGen("Charizard", "006", "Fire / Flying",1,3);
     
-    const squirtle = new pokeInfoGen("Squirtle", "007", "Water");
-    const wartortle = new pokeInfoGen("Wartortle", "008", "Water");
-    const blastoise = new pokeInfoGen("Blastoise", "009", "Water");
+    const squirtle = new pokeInfoGen("Squirtle", "007", "Water",1,1);
+    const wartortle = new pokeInfoGen("Wartortle", "008", "Water",1,2);
+    const blastoise = new pokeInfoGen("Blastoise", "009", "Water",1,3);
     
-    const caterpie = new pokeInfoGen("Caterpie", "010", "Bug");
-    const metapod = new pokeInfoGen("Metapod", "011", "Bug");
-    const butterfree = new pokeInfoGen("Butterfree", "012", "Bug / Flying");
+    const caterpie = new pokeInfoGen("Caterpie", "010", "Bug",1,1);
+    const metapod = new pokeInfoGen("Metapod", "011", "Bug",1,2);
+    const butterfree = new pokeInfoGen("Butterfree", "012", "Bug / Flying",1,3);
     
-    const weedle = new pokeInfoGen("Weedle", "013", "Bug / Poison");
-    const kakuna = new pokeInfoGen("Kakuna", "014", "Bug / Poison");
-    const beedrill = new pokeInfoGen("Beedrill", "015", "Bug / Poison");
+    const weedle = new pokeInfoGen("Weedle", "013", "Bug / Poison",1,1);
+    const kakuna = new pokeInfoGen("Kakuna", "014", "Bug / Poison",1,2);
+    const beedrill = new pokeInfoGen("Beedrill", "015", "Bug / Poison",1,3);
     
-    const pidgey = new pokeInfoGen("Pidgey", "016", "Normal / Flying");
-    const pidgeotto = new pokeInfoGen("Pidgeotto", "017", "Normal / Flying");
-    const pidgeot = new pokeInfoGen("Pidgeot", "018", "Normal / Flying");
+    const pidgey = new pokeInfoGen("Pidgey", "016", "Normal / Flying",1,1);
+    const pidgeotto = new pokeInfoGen("Pidgeotto", "017", "Normal / Flying",1,2);
+    const pidgeot = new pokeInfoGen("Pidgeot", "018", "Normal / Flying",1,3);
     
-    const rattata = new pokeInfoGen("Rattata", "019", "Normal");
-    const raticate = new pokeInfoGen("Raticate", "020", "Normal");
+    const rattata = new pokeInfoGen("Rattata", "019", "Normal",1,1);
+    const raticate = new pokeInfoGen("Raticate", "020", "Normal",1,2);
     
     return [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, caterpie, metapod, butterfree, 
         weedle, kakuna, beedrill, pidgey, pidgeotto, pidgeot, rattata, raticate];
