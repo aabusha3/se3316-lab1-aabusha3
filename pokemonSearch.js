@@ -59,9 +59,7 @@ var pokemonArray = new pokeArray();
 function nameSearch(){
     var searchName = document.getElementById("nameSearch").value;
 
-    const regex = new RegExp('([a-zA-Z])');
-
-    if(!regex.test(searchName)) {
+    if(/[^a-zA-Z]/.test(searchName)) {
         window.alert("Please Search Only Letters 'A-Z And 'a-z'");
         return;
     }
@@ -88,7 +86,7 @@ function nameSearchCheck(e){
 function numSearch(){
     var searchNum = document.getElementById("numSearch").value;
 
-    if(searchNum.includes('.') || isNaN(parseInt(searchNum)) || (parseInt(searchNum)  > 20 || parseInt(searchNum) < 1)){
+    if(/[^0-9]/g.test(searchNum) || (parseInt(searchNum)  > 20 || parseInt(searchNum) < 1)){
         window.alert("Please Only Search Integers Between 1 And 20");
         return;
     }
