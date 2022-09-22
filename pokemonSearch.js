@@ -70,18 +70,18 @@ function nameSearch(){
         if(pokemon.pName.toLowerCase().includes(searchName.toLowerCase())){
             result+=pokemon.print + "\n\n";
             resultArrayIndex++;
-            if(resultArrayIndex == 5) break;
+            if(resultArrayIndex === 5) break;
         };
     
-    if(resultArrayIndex == 0) window.alert("Search Turned Empty :(");
+    if(resultArrayIndex === 0) window.alert("Search Turned Empty :(");
     else window.alert(result);
 
     result = "";
     resultArrayIndex = 0;
 }
 
-function nameSearchCheck(e){
-    if(window.event) if(e.keyCode == 13) nameSearch();
+function nameSearchCheck(){
+    if(window.event.which === 13) nameSearch();
 }
 
 
@@ -97,16 +97,16 @@ function numSearch(){
         if(pokemon.pNum.includes(searchNum)){
             result+=pokemon.print + "\n\n";
             resultArrayIndex++;
-            if(resultArrayIndex == 5) break;
+            if(resultArrayIndex === 5) break;
         };
     
-    if(resultArrayIndex == 0) window.alert("Search Turned Empty :(");
+    if(resultArrayIndex === 0) window.alert("Search Turned Empty :(");
     else window.alert(result);
 
     result = "";
     resultArrayIndex = 0;
 }
 
-function numSearchCheck(e){
-    if(window.event) if(e.keyCode == 13) numSearch();
+function numSearchCheck(){
+    if(window.event.which === 13) numSearch();
 }
