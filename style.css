@@ -9,7 +9,7 @@ body {
     height: 100%;
 }
 
-ul{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@ li:hover {
     background-color: #f1f1f1d4;
 }
 
-img{
+img {
     height: 250px;
 }
 
@@ -80,7 +80,7 @@ input {
     outline: none;
 }
 
-input:focus{
+input:focus {
     color: #000;
 }
 
