@@ -80,6 +80,8 @@ document.getElementsByClassName("divBody")[0].insertBefore(divSeperator, content
 document.getElementsByClassName("divBody")[0].insertBefore(searchDisplayDiv, divSeperator);
 searchDisplayDiv.style.display = "none";
 
+
+
 function nameSearchPopUp(){
     if(result.length === 0) window.alert("Search Turned Empty :(");
     else window.alert(result);
@@ -116,8 +118,6 @@ function nameSearch(){
                 document.createElement('br'), pokemon.Name, document.createElement('br'), pokemon.Type);
             searchDisplayList.appendChild(li);
             searchDisplayDiv.appendChild(searchDisplayList);
-            
-            if(searchDisplayList.childElementCount >= 5) break;
         };
 
     result = "";
@@ -177,8 +177,6 @@ function numSearch(){
                 document.createElement('br'), pokemon.Name, document.createElement('br'), pokemon.Type);
             searchDisplayList.appendChild(li);
             searchDisplayDiv.appendChild(searchDisplayList);
-            
-            if(searchDisplayList.childElementCount >= 5) break;
         }
     }
     result = "";
