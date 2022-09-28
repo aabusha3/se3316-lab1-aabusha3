@@ -12,21 +12,22 @@
 <h1>Aabusha3's SE 3316 Lab 1: Pok&#233;dex</h1>
 <p>Hello World!</p>
 
-<div class="search">
-    <input id="numSearch" type="text" onkeypress="numSearchCheck()" maxlength="3" placeholder="Search By Number (1-20)">
-    <button onclick="numSearch()" type="submit">
+<div class="searchBar">
+    <input id="numSearch" type="text" onkeydown="numSearchKeyCheck()" oninput="numSearch()" maxlength="3" placeholder="Search By Number (1-20)"/>
+    <button onclick="numSearchPopUp()" type="submit">
         <i>&#128269;</i>
     </button>
 </div>
 <br>
-<div class="search">
-    <input id="nameSearch" type="text" onkeypress="nameSearchCheck()" maxlength="20" placeholder="Search By Name ('A-Z' & 'a-z')">
-    <button onclick="nameSearch()" type="submit">
+<div class="searchBar">
+    <input id="nameSearch" type="text" onkeydown="nameSearchKeyCheck()" oninput="nameSearch()" maxlength="20" placeholder="Search By Name ('A-Z' & 'a-z')"/>
+    <button onclick="nameSearchPopUp()" type="submit">
         <i>&#128269;</i>
     </button>
 </div>
 
 <br>
+<div class="divBody">
 <div class="content">
     <ul>
         <li><img src="images/1.png" alt="Bulbasaur"><br><br>#001<br>Bulbasaur<br>Grass / Poison</li>
@@ -50,6 +51,7 @@
         <li><img src="images/19.png" alt="Rattata"><br><br>#019<br>Rattata<br>Normal</li>
         <li><img src="images/20.png" alt="Raticate"><br><br>#020<br>Raticate<br>Normal</li>
     </ul>
+</div>
 </div>
 
 <footer>
