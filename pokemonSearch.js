@@ -137,28 +137,65 @@ function nameSearch(){
 }
 
 
-function numSearch(){
+
+function numSearchPopUp(){
+    if(result.length === 0) window.alert("Search Turned Empty :(\nMake Sure Your Search Number Is Less Than Or Equal To 20");
+    else {
+        if(isZero) window.alert("Please Only Search Integers Between 1 And 20");
+        else window.alert(result);
+    }
+}
+
+function numSearchKeyCheck(){
+    if(window.event.which === 13) numSearchPopUp();
+}
+
+function numSearch(){ 
     var searchNum = document.getElementById("numSearch").value;
 
-    if(/[^0-9]/g.test(searchNum) || searchNum==='' || (parseInt(searchNum)  > 20 || parseInt(searchNum) < 1)){
+    if (/([^0-9])/g.test(searchNum)){
+        document.getElementById("numSearch").value = document.getElementById("numSearch").value.substring(0, document.getElementById("numSearch").value.length-1);
         window.alert("Please Only Search Integers Between 1 And 20");
         return;
     }
 
-    for(const pokemon of pokemonArray)
-        if(pokemon.pNum.includes(searchNum)){
-            result+=pokemon.print + "\n\n";
-            resultArrayIndex++;
-            if(resultArrayIndex === 5) break;
-        };
+    var lastChild = searchDisplayList.lastElementChild; 
+    while (lastChild) {
+        searchDisplayList.removeChild(lastChild);
+        lastChild = searchDisplayList.lastElementChild;
+    }
     
-    if(resultArrayIndex === 0) window.alert("Search Turned Empty :(");
-    else window.alert(result);
+    searchDisplayDiv.style.display = "inline-block";  
 
+    for(const pokemon of pokemonArray){
+        if(pokemon.Num.includes(searchNum)){    
+            var li = document.createElement("li");
+            var img = document.createElement('img');
+            img.src = pokemon.ImgURL;
+            img.alt = pokemon.Name;
+            li.append(img, document.createElement('br'), document.createElement('br'), "#" + pokemon.Num, 
+                document.createElement('br'), pokemon.Name, document.createElement('br'), pokemon.Type);
+            searchDisplayList.appendChild(li);
+            searchDisplayDiv.appendChild(searchDisplayList);
+            
+            if(searchDisplayList.childElementCount >= 5) break;
+        }
+    }
     result = "";
-    resultArrayIndex = 0;
-}
+    for(const pokemonLI of searchDisplayList.childNodes) 
+        result += pokemonArray.find(element => element.Name === pokemonLI.childNodes[5].nodeValue).print + "\n\n";
 
-function numSearchCheck(){
-    if(window.event.which === 13) numSearch();
+    if(parseInt(searchNum) === 0) isZero = true;
+    else isZero = false;
+    
+    if(searchNum.length === 0) {
+        searchDisplayDiv.style.display = "none";
+        result = "";
+
+        var lastChild = searchDisplayList.lastElementChild; 
+        while (lastChild) {
+            searchDisplayList.removeChild(lastChild);
+            lastChild = searchDisplayList.lastElementChild;
+        }
+    }
 }
