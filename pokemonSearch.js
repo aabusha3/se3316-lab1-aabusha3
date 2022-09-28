@@ -64,8 +64,21 @@ function pokeArray(){
 
 
 var result = "";
-var resultArrayIndex = 0;
 var pokemonArray = new pokeArray();
+var isZero = true;
+
+const searchDisplayDiv = document.createElement("div");
+const searchDisplayList = document.createElement("ul");
+const searchLabel = document.createElement("h2");
+searchLabel.textContent = "Search Result:\n";
+searchDisplayDiv.appendChild(searchLabel);
+
+const divSeperator = document.createElement('br');
+const contentDiv = document.getElementsByClassName("content")[0];
+searchDisplayDiv.className ="searchContent";
+document.getElementsByClassName("divBody")[0].insertBefore(divSeperator, contentDiv);
+document.getElementsByClassName("divBody")[0].insertBefore(searchDisplayDiv, divSeperator);
+searchDisplayDiv.style.display = "none";
 
 function nameSearch(){
     var searchName = document.getElementById("nameSearch").value;
