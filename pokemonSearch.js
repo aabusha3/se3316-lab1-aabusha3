@@ -183,7 +183,8 @@ function numSearch(){
             img.src = pokemon.ImgURL;
             img.alt = pokemon.Name;
             li.append(img, document.createElement('br'), document.createElement('br'), "#" + pokemon.Num, 
-                document.createElement('br'), pokemon.Name, document.createElement('br'), pokemon.Type);
+                document.createElement('br'), pokemon.Name, document.createElement('br'), pokemon.Type,
+                document.createElement('br'), "Gen " + pokemon.Gen, document.createElement('br'), "Evolution Stage " + pokemon.EvoStage);
             searchDisplayList.appendChild(li);
             searchDisplayDiv.appendChild(searchDisplayList);
         }
