@@ -20,6 +20,14 @@ class pokeInfoGen{
         return this.type;
     }
 
+    get Gen(){
+        return this.gen;
+    }
+
+    get EvoStage(){
+        return this.evoStage;
+    }
+
     get ImgURL(){
         return this.imgURL;
     }
