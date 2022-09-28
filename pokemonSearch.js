@@ -1,18 +1,27 @@
 class pokeInfoGen{
-    constructor(name="", num="", type="", gen=1, evoStage=0) {
+    constructor(name="", num="", type="", gen=1, evoStage=0, imgURL="") {
         this.name = name;
         this.num = num;
         this.type = type;
         this.gen = gen;
         this.evoStage = evoStage;
+        this.imgURL = imgURL;
     }
 
-    get pName(){
+    get Name(){
         return this.name;
     }
 
-    get pNum(){
+    get Num(){
         return this.num;
+    }
+
+    get Type(){
+        return this.type;
+    }
+
+    get ImgURL(){
+        return this.imgURL;
     }
 
 	get print(){
